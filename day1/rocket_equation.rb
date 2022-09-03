@@ -15,4 +15,8 @@ class PayloadCalculator
   def total_fuel
     modules.sum { |m| Cargo.new(m).fuel_required}
   end
+
+  def total_fuel_part_two
+    modules.sum { |m| Cargo.new(m).fuel_required_part_two(m) }
+  end
 end
